@@ -1,3 +1,5 @@
+sudo apt-get update -y
+
 docker service create \
   --name aura-frontend \
   --network aura-network \
