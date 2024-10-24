@@ -1,5 +1,9 @@
 sudo apt-get update -y
 
+docker service rm aura-frontend || true
+docker service rm aura-app || true
+docker service rm aura-db || true
+
 docker service create \
   --name aura-frontend \
   --network aura-network \
