@@ -1,4 +1,4 @@
-docker stack deploy -c docker-compose.yml --detach aura-stack
+docker stack deploy -c /home/ubuntu/swarm_connection docker-compose.yml --detach aura-stack
 
 
 
