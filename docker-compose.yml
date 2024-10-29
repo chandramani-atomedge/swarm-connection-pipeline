@@ -7,7 +7,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.mylabel == db-instance
+          - node.labels.mylabel == worker2
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -26,7 +26,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.mylabel == web-instance
+          - node.labels.mylabel == worker1
     networks:
       - aura-network
     ports:
@@ -40,7 +40,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.mylabel == web-instance
+          - node.labels.mylabel == worker1
     networks:
       - aura-network
     ports:
