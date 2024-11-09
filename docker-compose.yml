@@ -21,7 +21,7 @@ services:
       - "5432:5432"
 
   aura-app:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-app:latest
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-app:AURA-580
     deploy:
       replicas: 1
       placement:
@@ -33,6 +33,9 @@ services:
       - "8080:8080"
     depends_on:
       - aura-db  # aura-app starts after aura-db
+    dns:
+      - 8.8.8.8 
+      - 8.8.4.4  
 
   aura-frontend:
     image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-frontend:latest
