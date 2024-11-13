@@ -27,6 +27,11 @@ services:
       placement:
         constraints:
           - node.labels.mylabel == worker1
+    environment:
+      AWS_ACCESS_KEY_ID: "AKIAT567PXHK6WVKNEOS3"
+      AWS_SECRET_ACCESS_KEY: "9yZfLNgfLmMtIc+uERbDFw+jygll+MtjuX8rqWZKl"
+      OTP_API_KEY: "5d7dbdd8-6498-11ef-8b60-0200cd936042"
+      AWS_REGION: "ap-south-1"
     networks:
       - aura-network
     ports:
@@ -38,7 +43,7 @@ services:
       - 8.8.4.4  
 
   aura-frontend:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-middleware:latest
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-frontend:latest
     deploy:
       replicas: 1
       placement:
