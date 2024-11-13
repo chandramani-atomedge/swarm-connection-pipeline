@@ -21,7 +21,7 @@ services:
       - "5432:5432"
 
   aura-app:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-app:AURA-580
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/testing-app:latest
     deploy:
       replicas: 1
       placement:
