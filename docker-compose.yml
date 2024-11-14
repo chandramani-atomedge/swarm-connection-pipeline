@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   aura-db:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:${AURA_DB_TAG}
     deploy:
       replicas: 1
       placement:
@@ -21,7 +21,7 @@ services:
       - "5432:5432"
 
   aura-app:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-app:AURA-473B
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-app:${AURA_APP_TAG}
     deploy:
       replicas: 1
       placement:
@@ -43,7 +43,7 @@ services:
       - 8.8.4.4  
 
   aura-frontend:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-middleware:latest
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-middleware:${AURA_FRONTEND_TAG}
     deploy:
       replicas: 1
       placement:
