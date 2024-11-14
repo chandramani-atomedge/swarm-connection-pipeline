@@ -43,7 +43,7 @@ services:
       - 8.8.4.4  
 
   aura-frontend:
-    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-middleware:${AURA_FRONTEND_TAG}
+    image: 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-frontend:${AURA_FRONTEND_TAG}
     deploy:
       replicas: 1
       placement:
